@@ -36,7 +36,7 @@ export const albums: Album[] = [
     slug: "vienna",
     title: "Vienna",
     location: "Vienna, Austria",
-    description: "Vienna Description",
+    description: "Soft morning light, grand facades, and quiet moments across Vienna.",
     coverSrc: "/vienna/1.jpg",
     photos: [
       { src: "/vienna/1.jpg", alt: "alt", caption: "caption" },
