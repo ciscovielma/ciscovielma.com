@@ -1,0 +1,242 @@
+.photosPage {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 80px 26px;
+}
+
+.albumDetailHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.backButton,
+.closeButton,
+.slideshowNav {
+  border: none;
+  background: none;
+  color: var(--text);
+  cursor: pointer;
+  font: inherit;
+}
+
+.backButton {
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.albumDetailIntro {
+  flex: 1;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 14px;
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.albumDetailIntro h1 {
+  margin: 0 0 18px;
+  font-size: clamp(2.4rem, 2.4vw, 3.6rem);
+  line-height: 1.05;
+}
+
+.albumLocationDetail {
+  margin: 0;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.introText {
+  color: var(--muted);
+  line-height: 1.8;
+  max-width: 50rem;
+}
+
+.photoList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.photoCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: left;
+  border: none;
+  background: var(--surface);
+  border-radius: 28px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  color: inherit;
+}
+
+.photoCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
+}
+
+.photoImageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--panel);
+}
+
+.photoItem {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.slideshowOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.95);
+  padding: 0;
+}
+
+.slideshowContent {
+  position: relative;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  max-width: none;
+  max-height: none;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.slideshowImageWrap {
+  position: absolute;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.slideshowImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.slideshowBottomBar {
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  width: auto;
+  padding: 0 12px;
+  pointer-events: none;
+}
+
+.slideshowPosition {
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #f8fafc;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  backdrop-filter: blur(10px);
+}
+
+.closeButton {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  z-index: 20;
+  font-size: 28px;
+  line-height: 1;
+  color: #f8fafc;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 999px;
+  padding: 4px 10px;
+}
+
+.slideshowNav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  color: #f8fafc;
+  background: rgba(0, 0, 0, 0.72);
+  z-index: 70;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.slideshowNav:hover {
+  background: rgba(0, 0, 0, 0.88);
+}
+
+.slideshowNavLeft {
+  left: 12px;
+}
+
+.slideshowNavRight {
+  right: 12px;
+}
+
+@media (max-width: 980px) {
+  .albumDetailHeader {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .photoList {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .photosPage {
+    padding: 50px 18px;
+  }
+
+  .albumImageWrap,
+  .photoImageWrap {
+    min-height: 220px;
+  }
+
+  .slideshowNav {
+    width: 44px;
+    height: 44px;
+  }
+}
