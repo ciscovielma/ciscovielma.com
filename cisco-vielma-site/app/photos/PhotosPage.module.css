@@ -39,7 +39,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-height: 520px;
+  min-height: 0;
   text-align: left;
   border: none;
   background: var(--surface);
@@ -60,7 +60,7 @@
 .albumImageWrap {
   position: relative;
   width: 100%;
-  min-height: 360px;
+  aspect-ratio: 4 / 3;
   overflow: hidden;
 }
 
@@ -129,7 +129,25 @@
     padding: 50px 18px;
   }
 
+  .pageHeader h1 {
+    font-size: clamp(1.85rem, 8vw, 2.4rem);
+  }
+
+  .introText {
+    line-height: 1.65;
+  }
+
   .albumGrid {
     grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .albumMeta {
+    padding: 16px;
+    gap: 10px;
+  }
+
+  .albumMeta h2 {
+    font-size: 1.25rem;
   }
 }
