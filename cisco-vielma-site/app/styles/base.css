@@ -1,0 +1,31 @@
+:root {
+  --bg: #e8edf4;
+  --surface: #ffffff;
+  --panel: #f8fafc;
+  --panel-strong: #edf2f7;
+  --border: rgba(15, 23, 42, 0.08);
+
+  --text: #0f172a;
+  --muted: #4b607d;
+
+  --accent: #2563eb;
+  --accent-soft: #dbeafe;
+  --shadow: 0 30px 90px rgba(15, 23, 42, 0.08);
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #e8edf4;
+  color: var(--text);
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+a {
+  font: inherit;
+}

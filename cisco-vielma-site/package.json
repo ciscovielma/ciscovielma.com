@@ -1,0 +1,27 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "build:cf": "opennextjs-cloudflare build",
+    "start": "next start",
+    "deploy": "npm run build:cf && opennextjs-cloudflare deploy",
+    "preview": "npm run build:cf && opennextjs-cloudflare preview"
+  },
+  "engines": {
+    "node": ">=26.13.0"
+  },
+  "dependencies": {
+    "next": "^16.4.3",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1"
+  },
+  "devDependencies": {
+    "@opennextjs/cloudflare": "^1.20.15",
+    "@types/node": "20.11.17",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "18.2.19",
+    "typescript": "^5",
+    "wrangler": "^4.156.0"
+  }
+}
